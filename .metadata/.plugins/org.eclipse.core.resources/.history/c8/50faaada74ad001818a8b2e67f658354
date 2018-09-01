@@ -1,0 +1,24 @@
+//============================================================================
+// Name        : Combination_Lock.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <unordered_set>
+
+using namespace std;
+
+class Locks{
+public:
+
+private:
+
+	unordered_set<string> combinations;
+};
+
+int main() {
+	return 0;
+}

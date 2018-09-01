@@ -1,0 +1,78 @@
+/* Use the slash-star style comments or the system won't see your
+   identification information */
+/*
+ID: isabell13
+TASK: dualpal
+LANG: C++
+*/
+/* LANG can be C++11 or C++14 for those more recent releases */
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+bool works(string number){
+	cout << number <<endl;
+	for(int i = 0; i < (int) number.size() - ((int) number.size() / 2); i++){
+		if(number[i] != number[(int) number.size() - 1 - i]){
+			return false;
+		}
+	}
+
+	return true;
+}
+
+bool makePalindrome(int number){
+	int count = 0;
+
+	for(int i = 2; i < 16; i++){
+		string answer = "";
+		int backup = number;
+
+		while(number >= i){
+			int divide = number / i;
+			int module = number % i;
+
+			answer = to_string(module) + answer;
+			number = divide;
+		}
+
+		answer = (answer[0] == 0) ? answer : to_string(number) + answer;
+		number = backup;
+
+		if(works(answer)){
+			count++;
+		}
+
+		if(count >= 2){
+			return true;
+		}
+	}
+
+	return false;
+}
+
+int main() {
+	ifstream fin ("dualpal.in");
+	ofstream fout ("dualpal.out");
+	int count = 0;
+	int N;
+	int S;
+
+	fin >> N;
+	fin >> S;
+
+	S++;
+
+	while(count < N){
+		if(makePalindrome(S)){
+			count++;
+			fout << S << endl;
+		}
+
+		S++;
+	}
+
+	return 0;
+}

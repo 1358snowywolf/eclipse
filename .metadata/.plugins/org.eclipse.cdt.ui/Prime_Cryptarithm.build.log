@@ -1,0 +1,15 @@
+21:23:13 **** Incremental Build of configuration Debug for project Prime_Cryptarithm ****
+make all 
+Building file: ../src/Prime_Cryptarithm.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Prime_Cryptarithm.d" -MT"src/Prime_Cryptarithm.o" -o "src/Prime_Cryptarithm.o" "../src/Prime_Cryptarithm.cpp"
+Finished building: ../src/Prime_Cryptarithm.cpp
+ 
+Building target: Prime_Cryptarithm
+Invoking: GCC C++ Linker
+g++  -o "Prime_Cryptarithm"  ./src/Prime_Cryptarithm.o   
+Finished building target: Prime_Cryptarithm
+ 
+
+21:23:14 Build Finished. 0 errors, 0 warnings. (took 768ms)
+

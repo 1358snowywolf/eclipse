@@ -1,0 +1,15 @@
+15:04:14 **** Incremental Build of configuration Debug for project Palindrome_Square ****
+make all 
+Building file: ../src/Palindrome_Square.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Palindrome_Square.d" -MT"src/Palindrome_Square.o" -o "src/Palindrome_Square.o" "../src/Palindrome_Square.cpp"
+Finished building: ../src/Palindrome_Square.cpp
+ 
+Building target: Palindrome_Square
+Invoking: GCC C++ Linker
+g++  -o "Palindrome_Square"  ./src/Palindrome_Square.o   
+Finished building target: Palindrome_Square
+ 
+
+15:04:14 Build Finished. 0 errors, 0 warnings. (took 471ms)
+

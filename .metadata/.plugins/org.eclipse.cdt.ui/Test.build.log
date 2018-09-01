@@ -1,0 +1,300 @@
+13:28:17 **** Incremental Build of configuration Debug for project Test ****
+make all 
+Building file: ../src/Test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -o "src/Test.o" "../src/Test.cpp"
+In file included from /usr/include/c++/7/bits/hashtable.h:35:0,
+                 from /usr/include/c++/7/unordered_set:47,
+                 from ../src/Test.cpp:11:
+/usr/include/c++/7/bits/hashtable_policy.h: In instantiation of ‘struct std::__detail::__is_noexcept_hash<std::vector<int>, std::hash<std::vector<int> > >’:
+/usr/include/c++/7/type_traits:143:12:   required from ‘struct std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > >’
+/usr/include/c++/7/type_traits:154:31:   required from ‘struct std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+/usr/include/c++/7/bits/unordered_set.h:98:63:   required from ‘class std::unordered_set<std::vector<int> >’
+../src/Test.cpp:16:29:   required from here
+/usr/include/c++/7/bits/hashtable_policy.h:87:34: error: no match for call to ‘(const std::hash<std::vector<int> >) (const std::vector<int>&)’
+  noexcept(declval<const _Hash&>()(declval<const _Key&>()))>
+           ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/7/bits/move.h:54:0,
+                 from /usr/include/c++/7/bits/nested_exception.h:40,
+                 from /usr/include/c++/7/exception:143,
+                 from /usr/include/c++/7/ios:39,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/type_traits: In instantiation of ‘struct std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’:
+/usr/include/c++/7/bits/unordered_set.h:98:63:   required from ‘class std::unordered_set<std::vector<int> >’
+../src/Test.cpp:16:29:   required from here
+/usr/include/c++/7/type_traits:154:31: error: ‘value’ is not a member of ‘std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > >’
+     : public __bool_constant<!bool(_Pp::value)>
+                               ^~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/7/unordered_set:48:0,
+                 from ../src/Test.cpp:11:
+/usr/include/c++/7/bits/unordered_set.h: In instantiation of ‘class std::unordered_set<std::vector<int> >’:
+../src/Test.cpp:16:29:   required from here
+/usr/include/c++/7/bits/unordered_set.h:98:63: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef __uset_hashtable<_Value, _Hash, _Pred, _Alloc>  _Hashtable;
+                                                               ^~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:105:45: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::key_type key_type;
+                                             ^~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:106:47: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::value_type value_type;
+                                               ^~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:107:43: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::hasher hasher;
+                                           ^~~~~~
+/usr/include/c++/7/bits/unordered_set.h:108:46: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::key_equal key_equal;
+                                              ^~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:109:51: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::allocator_type allocator_type;
+                                                   ^~~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:114:45: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::pointer  pointer;
+                                             ^~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:115:50: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::const_pointer const_pointer;
+                                                  ^~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:116:47: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::reference  reference;
+                                               ^~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:117:52: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::const_reference const_reference;
+                                                    ^~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:118:46: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::iterator  iterator;
+                                              ^~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:119:51: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::const_iterator const_iterator;
+                                                   ^~~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:120:51: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::local_iterator local_iterator;
+                                                   ^~~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:121:57: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::const_local_iterator const_local_iterator;
+                                                         ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:122:47: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::size_type  size_type;
+                                               ^~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:123:52: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       typedef typename _Hashtable::difference_type difference_type;
+                                                    ^~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:282:7: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       operator=(initializer_list<value_type> __l)
+       ^~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:375:2: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+  emplace(_Args&&... __args)
+  ^~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:419:7: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       insert(const value_type& __x)
+       ^~~~~~
+/usr/include/c++/7/bits/unordered_set.h:423:7: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       insert(value_type&& __x)
+       ^~~~~~
+/usr/include/c++/7/bits/unordered_set.h:478:7: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       insert(initializer_list<value_type> __l)
+       ^~~~~~
+/usr/include/c++/7/bits/unordered_set.h:679:7: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       equal_range(const key_type& __x)
+       ^~~~~~~~~~~
+/usr/include/c++/7/bits/unordered_set.h:683:7: error: ‘value’ is not a member of ‘std::__not_<std::__and_<std::__is_fast_hash<std::hash<std::vector<int, std::allocator<int> > > >, std::__detail::__is_noexcept_hash<std::vector<int, std::allocator<int> >, std::hash<std::vector<int, std::allocator<int> > > > > >’
+       equal_range(const key_type& __x) const
+       ^~~~~~~~~~~
+../src/Test.cpp: In function ‘int main()’:
+../src/Test.cpp:21:22: error: no matching function for call to ‘std::unordered_set<std::vector<int> >::insert(std::vector<int>&)’
+  testing.insert(first);
+                      ^
+In file included from /usr/include/c++/7/unordered_set:48:0,
+                 from ../src/Test.cpp:11:
+/usr/include/c++/7/bits/unordered_set.h:467:2: note: candidate: template<class _InputIterator> void std::unordered_set<_Value, _Hash, _Pred, _Alloc>::insert(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Value = std::vector<int>; _Hash = std::hash<std::vector<int> >; _Pred = std::equal_to<std::vector<int> >; _Alloc = std::allocator<std::vector<int> >]
+  insert(_InputIterator __first, _InputIterator __last)
+  ^~~~~~
+/usr/include/c++/7/bits/unordered_set.h:467:2: note:   template argument deduction/substitution failed:
+../src/Test.cpp:21:22: note:   candidate expects 2 arguments, 1 provided
+  testing.insert(first);
+                      ^
+../src/Test.cpp:22:23: error: no matching function for call to ‘std::unordered_set<std::vector<int> >::insert(std::vector<int>&)’
+  testing.insert(second);
+                       ^
+In file included from /usr/include/c++/7/unordered_set:48:0,
+                 from ../src/Test.cpp:11:
+/usr/include/c++/7/bits/unordered_set.h:467:2: note: candidate: template<class _InputIterator> void std::unordered_set<_Value, _Hash, _Pred, _Alloc>::insert(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Value = std::vector<int>; _Hash = std::hash<std::vector<int> >; _Pred = std::equal_to<std::vector<int> >; _Alloc = std::allocator<std::vector<int> >]
+  insert(_InputIterator __first, _InputIterator __last)
+  ^~~~~~
+/usr/include/c++/7/bits/unordered_set.h:467:2: note:   template argument deduction/substitution failed:
+../src/Test.cpp:22:23: note:   candidate expects 2 arguments, 1 provided
+  testing.insert(second);
+                       ^
+../src/Test.cpp:24:17: error: no matching function for call to ‘begin(std::unordered_set<std::vector<int> >&)’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:105:37: note: candidate: template<class _Tp> const _Tp* std::begin(const std::valarray<_Tp>&)
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+/usr/include/c++/7/bits/range_access.h:105:37: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   ‘std::unordered_set<std::vector<int> >’ is not derived from ‘const std::valarray<_Tp>’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:104:31: note: candidate: template<class _Tp> _Tp* std::begin(std::valarray<_Tp>&)
+   template<typename _Tp> _Tp* begin(valarray<_Tp>&);
+                               ^~~~~
+/usr/include/c++/7/bits/range_access.h:104:31: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   ‘std::unordered_set<std::vector<int> >’ is not derived from ‘std::valarray<_Tp>’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:87:5: note: candidate: template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::begin(_Tp (&)[_Nm])
+     begin(_Tp (&__arr)[_Nm])
+     ^~~~~
+/usr/include/c++/7/bits/range_access.h:87:5: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::unordered_set<std::vector<int> >’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:58:5: note: candidate: template<class _Container> decltype (__cont.begin()) std::begin(const _Container&)
+     begin(const _Container& __cont) -> decltype(__cont.begin())
+     ^~~~~
+/usr/include/c++/7/bits/range_access.h:58:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.begin()) std::begin(const _Container&) [with _Container = std::unordered_set<std::vector<int> >]’:
+../src/Test.cpp:24:17:   required from here
+/usr/include/c++/7/bits/range_access.h:58:56: error: ‘const class std::unordered_set<std::vector<int> >’ has no member named ‘begin’
+     begin(const _Container& __cont) -> decltype(__cont.begin())
+                                                 ~~~~~~~^~~~~
+/usr/include/c++/7/bits/range_access.h:48:5: note: candidate: template<class _Container> decltype (__cont.begin()) std::begin(_Container&)
+     begin(_Container& __cont) -> decltype(__cont.begin())
+     ^~~~~
+/usr/include/c++/7/bits/range_access.h:48:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.begin()) std::begin(_Container&) [with _Container = std::unordered_set<std::vector<int> >]’:
+../src/Test.cpp:24:17:   required from here
+/usr/include/c++/7/bits/range_access.h:48:50: error: ‘class std::unordered_set<std::vector<int> >’ has no member named ‘begin’
+     begin(_Container& __cont) -> decltype(__cont.begin())
+                                           ~~~~~~~^~~~~
+In file included from /usr/include/c++/7/bits/range_access.h:36:0,
+                 from /usr/include/c++/7/string:51,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/initializer_list:89:5: note: candidate: template<class _Tp> constexpr const _Tp* std::begin(std::initializer_list<_Tp>)
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^~~~~
+/usr/include/c++/7/initializer_list:89:5: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   ‘std::unordered_set<std::vector<int> >’ is not derived from ‘std::initializer_list<_Tp>’
+  for(auto itr : testing){
+                 ^~~~~~~
+../src/Test.cpp:24:17: error: no matching function for call to ‘end(std::unordered_set<std::vector<int> >&)’
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:107:37: note: candidate: template<class _Tp> const _Tp* std::end(const std::valarray<_Tp>&)
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+/usr/include/c++/7/bits/range_access.h:107:37: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   ‘std::unordered_set<std::vector<int> >’ is not derived from ‘const std::valarray<_Tp>’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:106:31: note: candidate: template<class _Tp> _Tp* std::end(std::valarray<_Tp>&)
+   template<typename _Tp> _Tp* end(valarray<_Tp>&);
+                               ^~~
+/usr/include/c++/7/bits/range_access.h:106:31: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   ‘std::unordered_set<std::vector<int> >’ is not derived from ‘std::valarray<_Tp>’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:97:5: note: candidate: template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::end(_Tp (&)[_Nm])
+     end(_Tp (&__arr)[_Nm])
+     ^~~
+/usr/include/c++/7/bits/range_access.h:97:5: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::unordered_set<std::vector<int> >’
+  for(auto itr : testing){
+                 ^~~~~~~
+In file included from /usr/include/c++/7/string:51:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/bits/range_access.h:78:5: note: candidate: template<class _Container> decltype (__cont.end()) std::end(const _Container&)
+     end(const _Container& __cont) -> decltype(__cont.end())
+     ^~~
+/usr/include/c++/7/bits/range_access.h:78:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.end()) std::end(const _Container&) [with _Container = std::unordered_set<std::vector<int> >]’:
+../src/Test.cpp:24:17:   required from here
+/usr/include/c++/7/bits/range_access.h:78:54: error: ‘const class std::unordered_set<std::vector<int> >’ has no member named ‘end’
+     end(const _Container& __cont) -> decltype(__cont.end())
+                                               ~~~~~~~^~~
+/usr/include/c++/7/bits/range_access.h:68:5: note: candidate: template<class _Container> decltype (__cont.end()) std::end(_Container&)
+     end(_Container& __cont) -> decltype(__cont.end())
+     ^~~
+/usr/include/c++/7/bits/range_access.h:68:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.end()) std::end(_Container&) [with _Container = std::unordered_set<std::vector<int> >]’:
+../src/Test.cpp:24:17:   required from here
+/usr/include/c++/7/bits/range_access.h:68:48: error: ‘class std::unordered_set<std::vector<int> >’ has no member named ‘end’
+     end(_Container& __cont) -> decltype(__cont.end())
+                                         ~~~~~~~^~~
+In file included from /usr/include/c++/7/bits/range_access.h:36:0,
+                 from /usr/include/c++/7/string:51,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../src/Test.cpp:9:
+/usr/include/c++/7/initializer_list:99:5: note: candidate: template<class _Tp> constexpr const _Tp* std::end(std::initializer_list<_Tp>)
+     end(initializer_list<_Tp> __ils) noexcept
+     ^~~
+/usr/include/c++/7/initializer_list:99:5: note:   template argument deduction/substitution failed:
+../src/Test.cpp:24:17: note:   ‘std::unordered_set<std::vector<int> >’ is not derived from ‘std::initializer_list<_Tp>’
+  for(auto itr : testing){
+                 ^~~~~~~
+src/subdir.mk:18: recipe for target 'src/Test.o' failed
+make: *** [src/Test.o] Error 1
+
+13:28:17 Build Failed. 35 errors, 0 warnings. (took 415ms)
+

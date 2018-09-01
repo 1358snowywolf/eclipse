@@ -1,0 +1,15 @@
+16:17:57 **** Incremental Build of configuration Debug for project Mixing_Milk ****
+make all 
+Building file: ../src/Mixing_Milk.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Mixing_Milk.d" -MT"src/Mixing_Milk.o" -o "src/Mixing_Milk.o" "../src/Mixing_Milk.cpp"
+Finished building: ../src/Mixing_Milk.cpp
+ 
+Building target: Mixing_Milk
+Invoking: GCC C++ Linker
+g++  -o "Mixing_Milk"  ./src/Mixing_Milk.o   
+Finished building target: Mixing_Milk
+ 
+
+16:17:57 Build Finished. 0 errors, 0 warnings. (took 567ms)
+

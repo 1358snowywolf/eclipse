@@ -1,0 +1,15 @@
+21:01:16 **** Incremental Build of configuration Debug for project Billboard ****
+make all 
+Building file: ../src/Billboard.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Billboard.d" -MT"src/Billboard.o" -o "src/Billboard.o" "../src/Billboard.cpp"
+Finished building: ../src/Billboard.cpp
+ 
+Building target: Billboard
+Invoking: GCC C++ Linker
+g++  -o "Billboard"  ./src/Billboard.o   
+Finished building target: Billboard
+ 
+
+21:01:17 Build Finished. 0 errors, 0 warnings. (took 919ms)
+

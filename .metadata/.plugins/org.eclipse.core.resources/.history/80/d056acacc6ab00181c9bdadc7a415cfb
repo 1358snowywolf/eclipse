@@ -1,0 +1,103 @@
+/* Use the slash-star style comments or the system won't see your
+   identification information */
+/*
+ID: isabell13
+TASK: namenum
+LANG: C++
+*/
+/* LANG can be C++11 or C++14 for those more recent releases */
+
+
+#include <iostream>
+#include <fstream>
+#include <unordered_set>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+class NameThatNumber{
+public:
+	vector<string> makeName(string serial_number, const string vtl[][3], unordered_set<string> correct_names){
+		vector<string> official_names;
+		string name = "";
+		transform(serial_number, name, vtl, correct_names);
+
+		for(auto itl : names){
+			if(correct_names.find(itl) != correct_names.end()){
+				official_names.push_back(itl);
+			}
+		}
+
+		return official_names;
+	}
+
+private:
+	void transform(string serial_number, string name, const string vtl[][3], unordered_set<string>& correct_names){
+		if(serial_number.size() <= 0){
+			if(correct_names.find(name) != correct_names.end()){
+				names.insert(name);
+			}
+//			names.insert(name);
+			return;
+		}
+
+		int digit = serial_number[(int)serial_number.length()-1] - '0';
+
+		if(digit == 1 || digit == 0){
+			names.clear();
+			return;
+		}
+
+		serial_number = serial_number.substr(0, serial_number.size()-1);
+
+		for(int i = 0; i < 3; i++){
+			string backup = name;
+			name = vtl[digit - 2][i] + name;
+			transform(serial_number, name, vtl, correct_names);
+			name = backup;
+		}
+	}
+
+	unordered_set<string> names;
+};
+
+int main() {
+	ifstream fin ("namenum.in");
+	ifstream finn ("dict.txt");
+	ofstream fout ("namenum.out");
+	string serial_number;
+	string vtl[][3] = {
+			{"A", "B", "C"},
+			{"D", "E", "F"},
+			{"G", "H", "I"},
+			{"J", "K", "L"},
+			{"M", "N", "O"},
+			{"P", "R", "S"},
+			{"T", "U", "V"},
+			{"W", "X", "Y"}};
+	unordered_set<string> correct_names;
+
+	fin >> serial_number;
+	string tmp;
+	while(finn >> tmp){
+		correct_names.insert(tmp);
+	}
+
+	NameThatNumber* ntn = new NameThatNumber();
+	vector<string> vec = ntn->makeName(serial_number, vtl, correct_names);
+
+	if(vec.empty()){
+		fout << "NONE" << endl;
+		return 0;
+	}
+
+	sort(vec.begin(), vec.end());
+
+	for(int i = 0; i < (int) vec.size(); i++){
+		fout << vec[i] << endl;
+	}
+
+	return 0;
+}

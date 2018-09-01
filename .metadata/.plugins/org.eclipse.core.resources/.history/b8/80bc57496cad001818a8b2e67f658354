@@ -1,0 +1,65 @@
+//============================================================================
+// Name        : Prime_Cryptarithm.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <unordered_set>
+#include <vector>
+
+class Multiplication{
+public:
+	int possibilities(unordered_set<int> numbers){
+		int first = 0;
+		int second = 0;
+		recursion(first, second, 0, numbers);
+		return work;
+	}
+private:
+	void recursion(int first, int second, int level, unordered_set<int> numbers){
+		if(level == 5){
+			if(check(first, second, numbers)){
+				work++;
+			}
+		}
+		else{
+
+		}
+	}
+
+	bool check(int first, int second, unordered_set<int> numbers){
+		int ones = second % 10;
+		int tens = second / 10;
+
+		int firstResult = ones * first;
+		int secondResult = tens * first;
+
+		if(!firstCheck(firstResult, numbers) || !firstCheck(secondResult, numbers)){
+			return false;
+		}
+
+		int finalResult = firstResult + (secondResult * 10);
+	}
+
+	bool firstCheck(int result, unordered_set<int> numbers){
+		int digits = 0;
+
+		while(result > 0){
+			int number = result % 10;
+
+
+		}
+	}
+
+	int work = 0;
+};
+
+using namespace std;
+
+int main() {
+
+	return 0;
+}

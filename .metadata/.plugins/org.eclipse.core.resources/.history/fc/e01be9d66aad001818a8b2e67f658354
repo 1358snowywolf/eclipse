@@ -1,0 +1,29 @@
+//============================================================================
+// Name        : Prime_Cryptarithm.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+
+class Multiplication{
+public:
+	int possibilities(){
+
+	}
+private:
+	void recursion(){
+
+	}
+
+	int work = 0;
+};
+
+using namespace std;
+
+int main() {
+
+	return 0;
+}

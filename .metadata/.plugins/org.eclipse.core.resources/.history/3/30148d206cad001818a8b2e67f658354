@@ -1,0 +1,58 @@
+//============================================================================
+// Name        : Prime_Cryptarithm.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <vector>
+
+class Multiplication{
+public:
+	int possibilities(vector<int> numbers){
+		int first = 0;
+		int second = 0;
+		recursion(first, second, 0, numbers);
+		return work;
+	}
+private:
+	void recursion(int first, int second, int level, vector<int> numbers){
+		if(level == 5){
+			if(check(first, second, numbers)){
+				work++;
+			}
+		}
+		else{
+
+		}
+	}
+
+	bool check(int first, int second, vector<int> numbers){
+		int ones = second % 10;
+		int tens = second / 10;
+
+		int firstResult = ones * first;
+		int secondResult = tens * first;
+
+		if(!firstCheck(firstResult, numbers) || !firstCheck(secondResult, numbers)){
+			return false;
+		}
+
+		int finalResult = firstResult + (secondResult * 10);
+	}
+
+	bool firstCheck(int result, vector<int> numbers){
+
+	}
+
+	int work = 0;
+};
+
+using namespace std;
+
+int main() {
+
+	return 0;
+}

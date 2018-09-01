@@ -1,0 +1,98 @@
+//============================================================================
+// Name        : Combination_Lock.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <unordered_set>
+
+using namespace std;
+
+class Locks{
+public:
+	Locks(int max){
+		max_number = max;
+	}
+
+	int possibilities(vector<int> john, vector<int> master){
+		recursion(john, 0, 0, 0);
+		recursion(master, 0, 0, 0);
+		return combinations.size();
+	}
+
+private:
+	void recursion(vector<int> key, int plusTimes, int minusTimes, int index){
+		if(index == 4){
+			string input = "";
+
+			for(int i = 0; i < key.size(); i++){
+				input += to_string(key[i]);
+			}
+
+			combinations.insert(input);
+		}
+		else{
+			if(minusTimes < 2){
+				recursion(helper(key, index, 0), plusTimes, minusTimes + 1, index + 1);
+				recursion(helper(key, index, 0), plusTimes, minusTimes + 1, index);
+			}
+			if(plusTimes < 2){
+				recursion(helper(key, index, 2), plusTimes + 1, minusTimes, index + 1);
+				recursion(helper(key, index, 2), plusTimes + 1, minusTimes, index);
+			}
+			else{
+				recursion(key, 0, 0, index + 1);
+			}
+		}
+	}
+
+	vector<int> helper(vector<int> key, int index, int direction){   // 0 = minus, 2 = plus
+		if(direction == 0){
+			if(key[index] == 0){
+				key[index] = 50;
+			}
+			else{
+				key[index]--;
+			}
+		}
+		else{
+			key[index] = (key[index] + 1) % max_number;
+		}
+
+		return key;
+	}
+
+	unordered_set<string> combinations;
+	int max_number;
+};
+
+int main() {
+	ifstream fin ("combo.in");
+	ofstream fout ("combo.out");
+	int max_number;
+	vector<int> john;
+	vector<int> master;
+	int input;
+
+	fin >> max_number;
+
+	for(int i = 0; i < 3; i++){
+		fin >> input;
+		john.push_back(input);
+	}
+
+	for(int i = 0; i < 3; i++){
+		fin >> input;
+		master.push_back(input);
+	}
+
+	Locks* lock = new Locks(max_number);
+	fout << lock->possibilities(john, master);
+
+	return 0;
+}

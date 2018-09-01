@@ -1,0 +1,15 @@
+19:49:33 **** Incremental Build of configuration Debug for project Transformation ****
+make all 
+Building file: ../src/Transformation.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Transformation.d" -MT"src/Transformation.o" -o "src/Transformation.o" "../src/Transformation.cpp"
+Finished building: ../src/Transformation.cpp
+ 
+Building target: Transformation
+Invoking: GCC C++ Linker
+g++  -o "Transformation"  ./src/Transformation.o   
+Finished building target: Transformation
+ 
+
+19:49:33 Build Finished. 0 errors, 0 warnings. (took 611ms)
+

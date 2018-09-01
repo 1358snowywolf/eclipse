@@ -1,0 +1,15 @@
+12:17:08 **** Incremental Build of configuration Debug for project Shuffle ****
+make all 
+Building file: ../src/Shuffle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Shuffle.d" -MT"src/Shuffle.o" -o "src/Shuffle.o" "../src/Shuffle.cpp"
+Finished building: ../src/Shuffle.cpp
+ 
+Building target: Shuffle
+Invoking: GCC C++ Linker
+g++  -o "Shuffle"  ./src/Shuffle.o   
+Finished building target: Shuffle
+ 
+
+12:17:08 Build Finished. 0 errors, 0 warnings. (took 564ms)
+

@@ -1,0 +1,55 @@
+//============================================================================
+// Name        : Mixing_Milk.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <fstream>
+#include <map>
+
+using namespace std;
+
+int main() {
+	ifstream fin ("milk.in");
+	ofstream fout ("milk.out");
+	int milk_needed = 0;
+	int milk_suppliers = 0;
+	map<int, pair<int, int>> used;
+
+	fin >> milk_needed;
+	fin >> milk_suppliers;
+
+	for(int i = 0; i < milk_suppliers; i++){
+		int price;
+		int units;
+		fin >> price;
+		fin >> units;
+		pair<int, int> input (units, 0);
+		pair<int, pair<int, int>> input1 (price, input);
+
+		used.insert(input1);
+	}
+
+	int money = 0;
+	int milk = 0;
+
+	for(auto index : used){
+		pair<int, int> p = index.second;
+
+		while(p.second < p.first){
+			if(milk == milk_needed){
+				fout << money << endl;
+				return 0;
+			}
+
+			milk += 1;
+			money += index.first;
+			p.second++;
+		}
+	}
+
+	return 0;
+}

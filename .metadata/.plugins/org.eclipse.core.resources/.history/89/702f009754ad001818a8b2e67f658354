@@ -1,0 +1,25 @@
+//============================================================================
+// Name        : Test.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+
+using namespace std;
+
+int main() {
+	unordered_set<vector<int>> testing;
+	int arr[] = {1, 1, 1};
+	vector<int> first (arr, arr + sizeof(arr) / sizeof(int));
+	vector<int> second (arr, arr + sizeof(arr) / sizeof(int));
+
+	testing.insert(first, second);
+
+
+	return 0;
+}
