@@ -50,14 +50,28 @@ private:
 					copy[index] %= max_number;
 				}
 
-				// pay extra attention to 1 to n case,
-				// it is different from 0 to n-1 case.
 				copy[index] = (copy[index] == 0) ? max_number : copy[index];
 
 				recursion(copy, index + 1);
 			}
 		}
 	}
+
+//	vector<int> helper(vector<int> key, int index, int direction){   // 0 = minus, 2 = plus
+//		if(direction == 0){
+//			if(key[index] == 0){
+//				key[index] = max_number;
+//			}
+//			else{
+//				key[index]--;
+//			}
+//		}
+//		else{
+//			key[index] = (key[index] + 1) % max_number;
+//		}
+//
+//		return key;
+//	}
 
 	unordered_set<string> combinations;
 	int max_number;
@@ -72,6 +86,11 @@ int main() {
 	int input;
 
 	fin >> max_number;
+
+//	if(max_number == 1){
+//		fout << 1 << endl;
+//		return 0;
+//	}
 
 	for(int i = 0; i < 3; i++){
 		fin >> input;
